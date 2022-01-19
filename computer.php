@@ -43,6 +43,45 @@
             $this -> code = setCode($code);
             $this -> priice = setPrice($price);
         }
+
+        // getter/setter 
+        public function getCode() {
+
+            return $this -> code;
+        }
+        public function setCode($code) {
+
+            $this -> code = $code;
+        }
+
+        public function getModel() {
+
+            return $this -> mdoel;
+        }
+        public function setModel($mdoel) {
+
+            $this -> mdoel = $mdoel;
+        }
+
+        public function getPrice() {
+
+            return $this -> price;
+        }
+        public function setPrice($price) {
+
+            $this -> price = $price;
+        }
+
+        public function getBrand() {
+
+            return $this -> brand;
+        }
+        public function setBrand($brand) {
+
+            $this -> brand = $brand;
+        }
+
+        
      }
     ?>
 </head>
