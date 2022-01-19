@@ -81,6 +81,11 @@
             $this -> brand = $brand;
         }
 
+        public function printMe() {
+
+            echo $this;
+        }
+
         
      }
     ?>
