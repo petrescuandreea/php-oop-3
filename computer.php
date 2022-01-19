@@ -51,6 +51,9 @@
         }
         public function setCode($code) {
 
+            if(strlen($code) != 6 || !is_numeric($code)) {
+                throw new Exception("Code must contain 6 numbers!!");
+            }
             $this -> code = $code;
         }
 
@@ -60,6 +63,9 @@
         }
         public function setModel($mdoel) {
 
+            if(strlen($model) < 3 || strlen($model) > 20) {
+                throw new Exception("Type a word between 3 and 20 characters!!");
+            }
             $this -> mdoel = $mdoel;
         }
 
@@ -69,6 +75,9 @@
         }
         public function setPrice($price) {
 
+            if(!is_int($price) || $price < 0 || $price > 2000) {
+                throw new Exception("Type a price between 0 and 2000!!");
+            }
             $this -> price = $price;
         }
 
@@ -78,6 +87,9 @@
         }
         public function setBrand($brand) {
 
+            if(strlen($brand) < 3 || strlen($brand) > 20) {
+                throw new Exception("Type a word between 3 and 20 characters!!");
+            }
             $this -> brand = $brand;
         }
 
