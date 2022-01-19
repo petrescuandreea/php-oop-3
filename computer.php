@@ -29,7 +29,19 @@
      *      il corretto funzionamento dell'algoritmo
      * */
 
+     trait checkStr {
+
+         public function checkStrLen($var) {
+            if(strlen($var) < 3 || strlen($var) > 20) {
+                 throw new Exception("Type a word between 3 and 20 characters!!");
+            }
+         }
+
+     }
+
      class Computer {
+
+         use checkStr;
 
         // attributi 
         private $code;
@@ -63,10 +75,15 @@
         }
         public function setModel($model) {
 
-            if(strlen($model) < 3 || strlen($model) > 20) {
-                throw new Exception("Type a word between 3 and 20 characters!!");
-            }
-            $this -> model = $model;
+            $string = $this -> checkStrLen($model);
+            if($string) 
+                return $string;
+            else 
+                $this -> model = $model;
+            // if(strlen($model) < 3 || strlen($model) > 20) {
+            //     throw new Exception("Type a word between 3 and 20 characters!!");
+            // }
+            // $this -> model = $model;
         }
 
         public function getPrice() {
@@ -87,10 +104,15 @@
         }
         public function setBrand($brand) {
 
-            if(strlen($brand) < 3 || strlen($brand) > 20) {
-                throw new Exception("Type a word between 3 and 20 characters!!");
-            }
-            $this -> brand = $brand;
+            $string = $this -> checkStrLen($brand); 
+            if($string) 
+                return $string;
+            else 
+                $this -> brand = $brand;
+            // if(strlen($brand) < 3 || strlen($brand) > 20) {
+            //     throw new Exception("Type a word between 3 and 20 characters!!");
+            // }
+            // $this -> brand = $brand;
         }
 
         public function printMe() {
