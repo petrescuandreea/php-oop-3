@@ -36,6 +36,13 @@
         private $model;
         private $price;
         private $brand;
+
+        // metodi 
+        public function __construct($code, $price) {
+
+            $this -> code = setCode($code);
+            $this -> priice = setPrice($price);
+        }
      }
     ?>
 </head>
