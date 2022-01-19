@@ -40,8 +40,8 @@
         // metodi 
         public function __construct($code, $price) {
 
-            $this -> code = setCode($code);
-            $this -> priice = setPrice($price);
+            $this -> setCode($code);
+            $this -> setPrice($price);
         }
 
         // getter/setter 
@@ -59,14 +59,14 @@
 
         public function getModel() {
 
-            return $this -> mdoel;
+            return $this -> model;
         }
-        public function setModel($mdoel) {
+        public function setModel($model) {
 
             if(strlen($model) < 3 || strlen($model) > 20) {
                 throw new Exception("Type a word between 3 and 20 characters!!");
             }
-            $this -> mdoel = $mdoel;
+            $this -> model = $model;
         }
 
         public function getPrice() {
@@ -111,6 +111,85 @@
     ?>
 </head>
 <body>
+    <h1>Computer1</h1>
+    <?php
+        try {
+
+            $computer1 = new Computer("012345", 900);
+            $computer1 -> setBrand("Apple");
+            $computer1 -> setModel("MacBook Pro");
+
+            $computer1 -> printMe();
+        } catch (Exception $e){
+
+            echo  "<h2>" . $e -> getMessage() . "</h2>";
+        }
+
+    ?>
+
+    <h1>Computer2</h1>
+    <!-- test code  -->
+    <?php
+        try {
+
+            $computer2 = new Computer("0123455", 900);
+            $computer2 -> setBrand("Apple");
+            $computer2 -> setModel("MacBook Pro");
+
+            $computer2 -> printMe();
+        } catch (Exception $e){
+
+            echo  "<h2>" . $e -> getMessage() . "</h2>";
+        }
+    ?>
+
+    <h1>Computer3</h1>
+    <!-- test price -->
+    <?php
+        try {
+
+            $computer3 = new Computer("012345", 2200);
+            $computer3 -> setBrand("Apple");
+            $computer3 -> setModel("MacBook Pro");
+
+            $computer3 -> printMe();
+        } catch (Exception $e){
+
+            echo  "<h2>" . $e -> getMessage() . "</h2>";
+        }
+    ?>
+
+    <h1>Computer4</h1>
+    <!-- test brand -->
+    <?php
+        try {
+
+            $computer4 = new Computer("012345", 1500);
+            $computer4 -> setBrand("HP");
+            $computer4 -> setModel("Notebook");
+
+            $computer4 -> printMe();
+        } catch (Exception $e){
+
+            echo  "<h2>" . $e -> getMessage() . "</h2>";
+        }
+    ?>
+
+    <h1>Computer5</h1>
+    <!-- test model -->
+    <?php
+        try {
+
+            $computer5 = new Computer("012345", 1500);
+            $computer5 -> setBrand("Apple");
+            $computer5 -> setModel("Pr");
+
+            $computer5 -> printMe();
+        } catch (Exception $e){
+
+            echo  "<h2>" . $e -> getMessage() . "</h2>";
+        }
+    ?>
     
 </body>
 </html>
