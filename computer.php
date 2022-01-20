@@ -80,6 +80,7 @@
                 return $string;
             else 
                 $this -> model = $model;
+                
             // if(strlen($model) < 3 || strlen($model) > 20) {
             //     throw new Exception("Type a word between 3 and 20 characters!!");
             // }
@@ -109,6 +110,7 @@
                 return $string;
             else 
                 $this -> brand = $brand;
+
             // if(strlen($brand) < 3 || strlen($brand) > 20) {
             //     throw new Exception("Type a word between 3 and 20 characters!!");
             // }
@@ -137,7 +139,7 @@
     <?php
         try {
 
-            $computer1 = new Computer("012345", 900);
+            $computer1 = new Computer("123456", 900);
             $computer1 -> setBrand("Apple");
             $computer1 -> setModel("MacBook Pro");
 
@@ -154,7 +156,7 @@
     <?php
         try {
 
-            $computer2 = new Computer("0123455", 900);
+            $computer2 = new Computer(1234565, 900);
             $computer2 -> setBrand("Apple");
             $computer2 -> setModel("MacBook Pro");
 
@@ -170,7 +172,7 @@
     <?php
         try {
 
-            $computer3 = new Computer("012345", 2200);
+            $computer3 = new Computer(123456, 2200);
             $computer3 -> setBrand("Apple");
             $computer3 -> setModel("MacBook Pro");
 
@@ -186,7 +188,7 @@
     <?php
         try {
 
-            $computer4 = new Computer("012345", 1500);
+            $computer4 = new Computer(123456, 1500);
             $computer4 -> setBrand("HP");
             $computer4 -> setModel("Notebook");
 
@@ -202,7 +204,7 @@
     <?php
         try {
 
-            $computer5 = new Computer("012345", 1500);
+            $computer5 = new Computer(123456, 1500);
             $computer5 -> setBrand("Apple");
             $computer5 -> setModel("Pr");
 
